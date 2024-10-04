@@ -24,15 +24,15 @@ class SqlIntroApplicationTests {
 	@DisplayName("Öğrenci tablosundaki tüm kayıtları listeleyin.")
 	@Test
 	void getAllStudentTest(){
-		assertEquals(ogrenciRepository.findAll().size(), 10);
-		assertEquals(ogrenciRepository.findAll().get(0).getAd(), "Hülya");
+		assertEquals(10, ogrenciRepository.findAll().size());
+		assertEquals("Hülya", ogrenciRepository.findAll().get(0).getAd());
 	}
 
 	@DisplayName("Öğrenci tablosundaki kız öğrencileri listeleyin.")
 	@Test
 	void getAllGirlsTest(){
-		assertEquals(ogrenciRepository.findGirls().size(), 5);
-		assertEquals(ogrenciRepository.findAll().get(0).getAd(), "Hülya");
+		assertEquals(5, ogrenciRepository.findGirls().size());
+		assertEquals("Hülya", ogrenciRepository.findAll().get(0).getAd());
 	}
 
 	@DisplayName("Öğrenci tablosunda kaydı bulunan sınıfların adını her sınıf bir kez görüntülenecek şekilde listeleyiniz")
@@ -44,9 +44,9 @@ class SqlIntroApplicationTests {
 	@DisplayName("Öğrenci tablosunda, 10A sınıfında olan kız öğrencileri listeleyiniz.")
 	@Test
 	void getFind10AGirlsTest(){
-		assertEquals(ogrenciRepository.find10AGirls().size(), 1);
-		assertEquals(ogrenciRepository.find10AGirls().get(0).getAd(), "Hülya");
-		assertEquals(ogrenciRepository.find10AGirls().get(0).getSoyad(), "Yiğit");
+		assertEquals(1, ogrenciRepository.find10AGirls().size());
+		assertEquals("Hülya", ogrenciRepository.find10AGirls().get(0).getAd());
+		assertEquals("Yiğit", ogrenciRepository.find10AGirls().get(0).getSoyad());
 	}
 
 	@DisplayName("Öğrenci numarası 5 ile 10 arasında olan Kız öğrencileri listeleyiniz.")

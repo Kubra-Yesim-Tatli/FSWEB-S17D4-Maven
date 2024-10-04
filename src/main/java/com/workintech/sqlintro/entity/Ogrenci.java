@@ -21,4 +21,12 @@ public class Ogrenci {
     private int puan;
     @Column(nullable = true)
     private String dtarih;
+
+    public String getSoyad() {
+        return "";
+    }
+
+    public String getAd() {
+        return "";
+    }
 }
